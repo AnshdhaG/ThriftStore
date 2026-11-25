@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5ef">
+  <meta name="description" content="Explore pre-loved student furniture and books for sale in Antigonish, Nova Scotia.">
+  <title>Marketplace — DormDrop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="marketplace-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html" aria-label="DormDrop home"><span class="brand-mark" aria-hidden="true">d</span><span>DormDrop</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu"><span></span><span></span></button>
+      <nav class="primary-nav" id="primary-navigation" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="product.html?category=Furniture">Furniture</a>
+        <a class="nav-link" href="product.html?category=Books">Books</a>
+        <a class="nav-link" href="index.html#how-it-works">How it works</a>
+        <a class="nav-link" href="#sell">Sell an item</a>
+        <a class="button button-dark nav-cta" href="#listings">Explore marketplace <span aria-hidden="true">↓</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="market-intro section-shell">
+      <div class="market-intro-copy"><p class="eyebrow"><span class="eyebrow-dot"></span> THE ANTIGONISH FINDS BOARD</p><h1>Find something <em>worth keeping.</em></h1><p>Explore affordable pre-loved furniture and books from your student community.</p></div>
+      <div class="market-note"><span aria-hidden="true">✳</span><span>Give it a second life.<br>Find it a new home.</span></div>
+    </section>
+
+    <section class="marketplace section-shell" id="listings" aria-label="Marketplace listings">
+      <div class="market-tools">
+        <div class="search-wrap"><label class="sr-only" for="product-search">Search listings</label><span aria-hidden="true">⌕</span><input id="product-search" type="search" placeholder="Search desks, textbooks, good finds..." autocomplete="off"><kbd>/</kbd></div>
+        <label class="sort-control"><span>Sort by</span><select id="sort-select" aria-label="Sort listings"><option value="recent">Recently added</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select></label>
+      </div>
+      <div class="filter-row">
+        <div class="category-tabs" role="group" aria-label="Filter by category">
+          <button type="button" class="filter-tab active" data-category="All Items" aria-pressed="true">All items <span class="tab-count" id="all-count">08</span></button>
+          <button type="button" class="filter-tab" data-category="Furniture" aria-pressed="false">Furniture</button>
+          <button type="button" class="filter-tab" data-category="Books" aria-pressed="false">Books</button>
+        </div>
+        <label class="subcategory-control"><span class="sr-only">Filter by subcategory</span><select id="subcategory-select" aria-label="Filter by subcategory"><option value="all">All categories</option></select><span aria-hidden="true">⌄</span></label>
+      </div>
+      <div class="results-heading"><p id="results-count" aria-live="polite">Showing all 8 finds</p><span>All listings are in Antigonish, NS <span aria-hidden="true">⌖</span></span></div>
+      <div class="product-grid marketplace-grid" id="product-grid"></div>
+      <div class="empty-state" id="empty-state" hidden><span aria-hidden="true">⌕</span><h2>No finds just yet.</h2><p>Try a different search or category. Your next favourite might be hiding.</p><button class="button button-outline" type="button" id="reset-filters">Show all listings</button></div>
+      <div class="market-endnote"><span>✳</span> A little browsing can go a long way. <span>✳</span></div>
+    </section>
+
+    <section class="sell-section section-shell" id="sell" aria-labelledby="sell-section-heading">
+      <div class="sell-section-image"><img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1000&q=85" alt="Cozy desk with a stack of books and warm light"></div>
+      <div class="sell-section-copy"><p class="eyebrow">A new home is just around the corner</p><h2 id="sell-section-heading">Pass your good things <em>along.</em></h2><p>Moving out? Making room? Put furniture and books you no longer need in front of students who do. Create a demo listing and see how simple it can be.</p><button class="button button-dark" type="button" data-open-sell>Start selling <span aria-hidden="true">↗</span></button><span class="sell-fine-print">Demo only — listings aren't published or saved.</span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell footer-main">
+      <div class="footer-brand"><a class="brand brand-footer" href="index.html"><span class="brand-mark" aria-hidden="true">d</span><span>DormDrop</span></a><p>Good finds, passed on. A student marketplace for pre-loved furniture and books in Antigonish.</p><span class="footer-tagline">Give it a second life. Find it a new home.</span></div>
+      <div class="footer-column"><h2>Explore</h2><a href="index.html">Home</a><a href="product.html">Marketplace</a><a href="product.html?category=Furniture">Furniture</a><a href="product.html?category=Books">Books</a></div>
+      <div class="footer-column"><h2>Good to know</h2><a href="index.html#how-it-works">How it works</a><a href="#sell">Sell an item</a><a href="mailto:hello@dormdrop.example">hello@dormdrop.example</a><span>Antigonish, Nova Scotia</span></div>
+    </div>
+    <div class="section-shell footer-bottom"><span>© 2026 DormDrop. A fictional marketplace prototype.</span><span>Made for second chances <span aria-hidden="true">✳</span></span></div>
+  </footer>
+
+  <dialog class="detail-dialog" id="detail-dialog" aria-labelledby="detail-title">
+    <button class="dialog-close" type="button" data-close-dialog aria-label="Close product details">×</button>
+    <div class="detail-layout">
+      <div class="detail-image-wrap"><img id="detail-image" src="" alt=""></div>
+      <div class="detail-copy">
+        <p class="eyebrow" id="detail-category"></p><h2 id="detail-title"></h2>
+        <p class="detail-price" id="detail-price"></p><p class="detail-description" id="detail-description"></p>
+        <div class="detail-condition"><span>Condition</span><strong id="detail-condition"></strong></div>
+        <div class="seller-card"><span class="seller-avatar" id="detail-avatar" aria-hidden="true"></span><div><strong id="detail-seller"></strong><span id="detail-location"></span></div></div>
+        <p class="pickup-note"><span aria-hidden="true">⌖</span> Pickup is arranged directly with the seller. Choose a preference to share your interest.</p>
+        <div class="detail-options">
+          <label class="quantity-control" id="quantity-field">Quantity<select id="detail-quantity"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label>
+          <label class="pickup-control" for="pickup-select">Pickup preference<select id="pickup-select"><option value="Campus pickup">Campus pickup</option><option value="Local pickup, mutually arranged">Local pickup, mutually arranged</option></select></label>
+        </div>
+        <button class="button button-dark contact-button" type="button" id="contact-seller">Contact seller <span aria-hidden="true">↗</span></button>
+        <p class="prototype-message" id="contact-message" role="status" hidden></p>
+        <p class="detail-disclaimer">This is a fictional demo. No message or transaction will be sent.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="form-dialog" id="sell-dialog" aria-labelledby="sell-dialog-title">
+    <button class="dialog-close" type="button" data-close-dialog aria-label="Close listing form">×</button>
+    <div class="form-dialog-content">
+      <p class="eyebrow">PASS IT ON</p><h2 id="sell-dialog-title">Start a <em>demo listing.</em></h2><p class="form-intro">Tell us a little about your item. This prototype won't publish or save your listing.</p>
+      <form id="listing-form">
+        <label for="listing-title">Item title <span aria-hidden="true">*</span><input id="listing-title" name="title" type="text" maxlength="70" required placeholder="e.g. Wooden study desk"></label>
+        <div class="form-row"><label for="listing-category">Category <span aria-hidden="true">*</span><select id="listing-category" name="category" required><option value="">Choose one</option><option>Furniture</option><option>Books</option></select></label>
+          <label for="listing-price">Price (CAD) <span aria-hidden="true">*</span><input id="listing-price" name="price" type="number" min="0" step="0.01" required placeholder="25"></label></div>
+        <label for="listing-condition">Condition <span aria-hidden="true">*</span><select id="listing-condition" name="condition" required><option value="">Choose one</option><option>Like new</option><option>Very good</option><option>Good</option><option>Fair</option></select></label>
+        <label for="listing-description">Short description <span aria-hidden="true">*</span><textarea id="listing-description" name="description" rows="3" maxlength="240" required placeholder="Share a few details about your item..."></textarea></label>
+        <button class="button button-dark form-submit" type="submit">Preview demo listing <span aria-hidden="true">↗</span></button>
+      </form>
+      <p class="form-success" id="listing-success" role="status" hidden></p>
+    </div>
+  </dialog>
+</body>
+</html>
